@@ -1,10 +1,15 @@
 :root{
     /*color var --*/
-    margin: 0px;
-    padding: 0px;
-    
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -12,14 +17,16 @@ body{
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 15% 10% 1fr 20% 15%;
+    grid-template-rows: 15% 10% auto auto 15%;
     grid-template-areas: 
         "header"
         "nav"
         "main"    
         "aside"
         "footer";
-    overflow-y: auto
+    overflow-y: auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
 }
 
 
@@ -47,9 +54,29 @@ main{
     grid-area: main;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    
+    grid-gap: 5px;
+}
+.box{
+    padding: 5px;
 }
 
-main .box .one{
+.box.one{
+    background: #fff;
+}
+.box.two{
+    background: #fff;
+}
+.box.three{
+    background: #fff;
+}
+.box.four{
+    background: #fff;
+}
+.box.five{
+    background: #fff;
+}
+.box.six{
     background: #fff;
 }
 
@@ -66,10 +93,11 @@ footer{
     font-size: 1rem;
 }
 
+
 @media(min-width:480px){
     .container{
         display: grid;
-        grid-template-columns: 15% 1fr 15%;
+        grid-template-columns: 20% 1fr 15%;
         grid-template-rows: 10% 1fr 10%;
         grid-template-areas: 
             "header nav"
