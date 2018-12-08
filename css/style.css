@@ -110,38 +110,42 @@ main {
     grid-gap: 5px;
 }
 
-.box {
-    padding: 5px;
+.box img{
+    padding-right: 5px;
+    height: 30vh;
+    width: 100%;
+    margin: 0;
 }
 
-.box.one {
+.box.one img{
     background: #fff;
-    background-image: url("img/abstract-architecture.jpg");
+    
+    /*background-image: url("img/abstract-architecture.jpg");*/
 }
 
 .box.two {
     background: #fff;
-    background-image: url("img/abstract-ai-art-373543.jpg");
+    /*background-image: url("img/abstract-ai-art-373543.jpg");*/
 }
 
 .box.three {
     background: #fff;
-    background-image: url("img/abstract-architecture.jpg");
+    /*background-image: url("img/abstract-architecture.jpg");*/
 }
 
 .box.four {
     background: #fff;
-    background-image: url("img/abstract-ai-art-373543.jpg");
+    /*background-image: url("img/abstract-ai-art-373543.jpg");*/
 }
 
 .box.five {
     background: #fff;
-    background-image: url("img/abstract-architecture.jpg");
+    /*background-image: url("img/abstract-architecture.jpg");*/
 }
 
 .box.six {
     background: #fff;
-    background-image: url("/img/abstract-ai-art-373543.jpg");
+    /*background-image: url("/img/abstract-ai-art-373543.jpg");*/
 }
 
 aside {
