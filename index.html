@@ -21,18 +21,89 @@
             <div><a href="">Contact</a></div>
             <div><a href="">Login</a></div>
         </nav>
+        <!-- Container for the image gallery -->
         <main>
-            <div class="box one"><img src="img/abstract-ai-art-373543.jpg" alt="placeholder1"></div>
-            <div class="box two"><img src="img/abstract-architecture.jpg" alt="placeholder2"></div>
-            <div class="box three"><img src="img/abstract-ai-art-373543.jpg" alt="placeholder1"></div>
-            <div class="box four"><img src="img/abstract-architecture.jpg" alt="placeholder2"></div>
-            <div class="box five"><img src="img/abstract-ai-art-373543.jpg" alt="placeholder1"></div>
-            <div class="box six"><img src="img/abstract-architecture.jpg" alt="placeholder2"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi itaque architecto commodi tenetur. Consequatur rem ex placeat laudantium ducimus velit repellendus aut quam? Autem, quis. Temporibus nisi ratione enim provident.
+            Magnam eius id alias nobis fugit, nihil temporibus debitis sunt perferendis, aspernatur assumenda explicabo ipsam cumque illum facere earum, ipsa porro error culpa animi? Distinctio eius repellendus aspernatur ab aperiam.
+            Voluptas ratione mollitia cum sequi quasi! Ratione provident voluptatibus pariatur totam vero esse maiores cupiditate vitae voluptatum laboriosam, nihil soluta possimus delectus, cumque eum nobis perspiciatis vel. Officiis, rem sed.
+            Quaerat molestiae necessitatibus eaque. Odit minus sapiente minima unde quod placeat cupiditate rem nisi est itaque deleniti quo recusandae, ut, earum libero dolorem eligendi distinctio nulla fugiat, nihil veniam. Earum?
+            Rem velit nam quod recusandae error optio ab perferendis necessitatibus minus vel sit soluta molestiae repellat, quos distinctio, maiores quibusdam cupiditate est voluptate id? Voluptates ad non ullam impedit eaque!</p>
         </main>
+        <div class="container_slider">
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="img/abstract-ai-art-373543.jpg" style="width:300px" height="100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="img/abstract-architecture.jpg" style="width:300px" height="100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="img/adorable-animal-black-1660964.jpg" style="width:300px" height="100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="img/adorable-animal-bow-1663409.jpg" style="width:300px" height="100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="img/adorable-animal-breed-1660970.jpg" style="width:300px" height="100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="img/animal-bulldog-candy-cane-1663416.jpg" style="width:300px" height="50%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="img/abstract-ai-art-373543.jpg" style="width:100%" height="100%"
+                        onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/abstract-architecture.jpg" style="width:100%" height="100%"
+                        onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/adorable-animal-black-1660964.jpg" style="width:100%" height="100%"
+                        onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/adorable-animal-bow-1663409.jpg" style="width:100%" height="100%"
+                        onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/adorable-animal-breed-1660970.jpg" style="width:100%" height="100%"
+                        onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/animal-bulldog-candy-cane-1663416.jpg" style="width:100%" height="100%"
+                        onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+            </div>
+        </div>
         <aside>
             <h4>Important Suff</h4>
             <br>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia error voluptatem qui! Adipisci perspiciatis voluptas assumenda qui, dicta eius repudiandae sunt maxime deserunt tempora laboriosam, ipsam accusamus voluptates itaque? Enim!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia error voluptatem qui! Adipisci
+                perspiciatis voluptas assumenda qui, dicta eius repudiandae sunt maxime deserunt tempora laboriosam,
+                ipsam accusamus voluptates itaque? Enim!</p>
         </aside>
         <footer>
             <p>My Website &copy; Eduard Neumann</p>

@@ -3,43 +3,44 @@
     margin: 0;
     padding: 0;
     border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+    box-sizing: border-box;
 }
- /* width */
- ::-webkit-scrollbar {
+
+/* width */
+::-webkit-scrollbar {
     width: 3px;
-  }
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #888;
-  }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  } 
+}
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* 
-/// Device = Desktops
-*/
+/*************************************************************************************** 
+************************** Device = Desktops *******************************************
+***************************************************************************************/
 
 .container {
     display: grid;
-    grid-template-columns: 15% 1fr 15%;
+    grid-template-columns: 15% 1fr 1fr;
     grid-template-rows: 2rem 1fr 2rem;
     grid-template-areas:
         "header  nav     nav"
-        "aside   main    main"
+        "aside   main    slider"
         "footer  footer  footer";
     overflow-y: auto;
     grid-column-gap: 5px;
@@ -47,19 +48,25 @@ body {
     height: 100vh;
 }
 
+/***************************************************************************************** 
+************************************** HEADER ********************************************
+*****************************************************************************************/
 header {
     margin-left: 5px;
     border-radius: 3px;
-    
     background: #262626de;
     color: #fff;
     grid-area: header;
 }
-header > h1{
+
+header>h1 {
     padding-top: 5px;
     text-align: center;
 }
-/*navbar*/
+
+/***************************************************************************************** 
+************************************** NAVBAR ********************************************
+*****************************************************************************************/
 nav {
     margin-right: 5px;
     border-radius: 5px;
@@ -70,25 +77,31 @@ nav {
     grid-column-gap: 20px;
 }
 
-/*positioning, styling nav a-tag*/
+
+/***************************************************************************************** 
+************************** positioning, styling nav a-tag ********************************
+*****************************************************************************************/
 nav>div {
     padding: 5px 3px;
     text-align: center;
     border-radius: 5px;
 }
 
-nav > div:first-child{
+nav>div:first-child {
     background: tomato;
-} 
-nav > div:nth-child(5) {
+}
+
+nav>div:nth-child(5) {
     background: tomato;
     grid-column: 6;
 }
-nav > div:hover {
+
+nav>div:hover {
     background-color: darkgoldenrod;
     opacity: 0.8;
 }
-nav > div > a {
+
+nav>div>a {
     text-decoration: none;
     color: white;
     cursor: pointer;
@@ -100,54 +113,105 @@ a.nostyle:visited {
     cursor: auto;
 }
 
+/***************************************************************************************** 
+*************************************** MAIN *********************************************
+*****************************************************************************************/
 main {
-    margin-right: 10px;
-    display: grid;
-    background: #f1f1f1;
+    background: violet;
+}
+/***************************************************************************************** 
+*************************************** SLIDER *******************************************
+*****************************************************************************************/
+
+.container_slider {
+    grid-area: "slider";
+    /* Position the image container (needed to position the left and right arrows) */
+    position: sticky;
+    max-width: 100vw;
     grid-area: main;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 5px;
+}
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    text-align: center;
 }
 
-.box img{
-    padding-right: 5px;
-    height: 30vh;
-    width: 100%;
-    margin: 0;
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
 }
 
-.box.one img{
-    background: #fff;
-    
-    /*background-image: url("img/abstract-architecture.jpg");*/
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.box.two {
-    background: #fff;
-    /*background-image: url("img/abstract-ai-art-373543.jpg");*/
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-.box.three {
-    background: #fff;
-    /*background-image: url("img/abstract-architecture.jpg");*/
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.box.four {
-    background: #fff;
-    /*background-image: url("img/abstract-ai-art-373543.jpg");*/
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
-.box.five {
-    background: #fff;
-    /*background-image: url("img/abstract-architecture.jpg");*/
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
 }
 
-.box.six {
-    background: #fff;
-    /*background-image: url("/img/abstract-ai-art-373543.jpg");*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/*******************************************************************************************
+************************************* ASIDE ************************************************
+*******************************************************************************************/
 aside {
     margin-left: 10px;
     background: rgba(65, 105, 225, 0.6);
@@ -155,6 +219,10 @@ aside {
     height: 50vh;
     overflow-y: scroll;
 }
+
+/***************************************************************************************** 
+************************************** FOOTER ********************************************
+*****************************************************************************************/
 
 footer {
     background: #262626de;
@@ -166,52 +234,60 @@ footer {
 }
 
 /* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
+ 
+  
 */
-
+/*****************************************************************************************
+************************  ##Device = Low Resolution Tablets, Mobiles (Landscape)**********
+******************************  ##Screen = B/w 481px to 767px ****************************
+*****************************************************************************************/
 @media (min-width: 481px) and (max-width: 767px) {
     .container {
         display: grid;
         grid-template-columns: 20% 1fr;
-        grid-template-rows: 2rem 1fr 2rem;
+        grid-template-rows: 2rem 1fr 1fr 2rem;
         grid-template-areas:
             "header nav"
-            "aside  main"
+            "main   main"
+            "aside  slider"
             "footer footer";
-        
+
         height: 80vh;
     }
 }
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
 
+/*****************************************************************************************
+*************************** ##Device = Most of the Smartphones Mobiles (Portrait)*********
+******************************  ##Screen = B/w 320px to 479pxHEADER **********************
+*****************************************************************************************/
 @media (min-width: 320px) and (max-width: 480px) {
 
     .container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0% 2rem 1fr 1rem 2rem;
+        grid-template-rows: 0% 2rem 1fr 1fr 1rem 2rem;
         grid-template-areas:
             "header"
             "nav"
             "main"
+            "slider"
             "aside"
             "footer";
-        
+
         grid-column-gap: 5px;
         grid-row-gap: 10px;
     }
-    nav{
+
+    nav {
         margin: 0px 5px;
     }
-    main{
+
+    main {
         margin: 0px 10px;
-        }
-    aside{
+    }
+
+    aside {
         margin: 0px;
         height: 10vh;
         overflow-y: scroll;
